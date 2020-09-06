@@ -5,6 +5,7 @@ public class Solution {
     public int lengthOfLastWord(final String A) 
     {
         int lastWordStartIndex=0, lastWordEndIndex=-1;
+        //lastWordEndIndex is initialized with -1, to mitigate the edge case where the string doesn't have even 1 digit or alphabet
         for(int i=0; i<A.length(); i++)
         {
             if(A.charAt(i)==' ' && (i+1)<A.length() && Character.isLetterOrDigit(A.charAt(i+1)))
