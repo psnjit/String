@@ -1,6 +1,9 @@
 // Java program to find smallest window containing 
 // all characters of a pattern. 
 //solved using binary search
+// time- check function checks on array of size 26. So~ O(1). Thus, result function takes O(n) times and is called from findSubString method log(n+m).
+//time complexity = O(n*logn)
+//space complexity is O(1), as extra array needed are of 26 size
 public class GFG 
 { 
 	static final int no_of_chars = 256; 
