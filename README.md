@@ -11,3 +11,6 @@ LC(https://leetcode.com/problems/longest-palindromic-substring/submissions/)
 
 𝐟𝐢𝐧𝐝-𝐭𝐡𝐞-𝐬𝐦𝐚𝐥𝐥𝐞𝐬𝐭-𝐰𝐢𝐧𝐝𝐨𝐰-𝐢𝐧-𝐚-𝐬𝐭𝐫𝐢𝐧𝐠-𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐢𝐧𝐠-𝐚𝐥𝐥-𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐬-𝐨𝐟-𝐚𝐧𝐨𝐭𝐡𝐞𝐫-𝐬𝐭𝐫𝐢𝐧𝐠-𝐁𝐒.𝐣𝐚𝐯𝐚- solved using BS, O(n*logn) time , O(1) space
 https://www.geeksforgeeks.org/find-the-smallest-window-in-a-string-containing-all-characters-of-another-string/
+
+𝐟𝐢𝐧𝐝-𝐭𝐡𝐞-𝐬𝐦𝐚𝐥𝐥𝐞𝐬𝐭-𝐰𝐢𝐧𝐝𝐨𝐰-𝐢𝐧-𝐚-𝐬𝐭𝐫𝐢𝐧𝐠-𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐢𝐧𝐠-𝐚𝐥𝐥-𝐜𝐡𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐬-𝐨𝐟-𝐚𝐧𝐨𝐭𝐡𝐞𝐫-𝐬𝐭𝐫𝐢𝐧𝐠-𝟐-𝐩𝐨𝐢𝐧𝐭𝐞𝐫.𝐣𝐚𝐯𝐚- solved using 2 pointers technique, O(n) time, O(1) space
+https://www.geeksforgeeks.org/find-the-smallest-window-in-a-string-containing-all-characters-of-another-string/
