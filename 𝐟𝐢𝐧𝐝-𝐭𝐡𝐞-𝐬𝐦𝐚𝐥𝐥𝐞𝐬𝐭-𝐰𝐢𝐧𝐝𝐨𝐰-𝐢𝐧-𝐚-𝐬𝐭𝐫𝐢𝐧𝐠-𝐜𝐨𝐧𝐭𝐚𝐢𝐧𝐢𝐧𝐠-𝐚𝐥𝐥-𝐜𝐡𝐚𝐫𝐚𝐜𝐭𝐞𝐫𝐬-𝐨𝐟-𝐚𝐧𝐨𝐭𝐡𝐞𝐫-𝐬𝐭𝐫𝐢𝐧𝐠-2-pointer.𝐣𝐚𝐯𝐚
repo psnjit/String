@@ -1,0 +1,67 @@
+// Java program to find smallest window containing 
+// all characters of a pattern. 
+
+//https://www.geeksforgeeks.org/find-the-smallest-window-in-a-string-containing-all-characters-of-another-string/
+
+//IDEA is to use 2 pointers i and j. j will move forward adding into arr2 till its valid and i will move forward removing from arr2 till its invalid
+//Answer is min diff of j and i
+
+//check function checks between two 26 size arrays. So O(26) ~ O(1). And its called (n-m) number of times. 
+//So, time complexity = O(n)
+//space complexity 2 rrays of 26 size~ O(1)
+
+public class GFG 
+{ 
+	static final int no_of_chars = 256; 
+	
+	// Function to find smallest window containing 
+	// all characters of 'pat' 
+	static int findSubString(String str, String pat) 
+	{ 
+      int arr1[]= new int[26];
+      int arr2[] = new int[26];
+      int ans=Integer.MAX_VALUE;
+      for(int i=0; i<pat.length(); i++)
+      {
+        arr1[pat.charAt(i)-97]++;
+      }
+      for(int i=0; i<pat.length()-1; i++)
+      {
+        arr2[str.charAt(i)-97]++;
+      }
+      for(int i=0, j=pat.length()-1; j<str.length() && i<str.length(); )
+      {
+      	while(j<str.length() && i<str.length() && !check(arr1, arr2))
+      	{
+        	arr2[str.charAt(j)-97]++;
+          	j++;
+      	}
+        while(j<str.length() && i<str.length() && check(arr1, arr2))
+      	{
+        	arr2[str.charAt(i)-97]--;
+          	ans=Math.min(ans, (j-i+1));
+            i++;
+      	}
+      }
+      return ans;
+    }
+  	public static boolean check(int arr1[], int arr2[])
+    {
+      for(int i=0; i<26; i++)
+      {
+        if(arr1[i]>arr2[i])
+          	return false;
+      }
+      return true;
+    }
+	
+	// Driver Method 
+	public static void main(String[] args) 
+	{ 
+		String str = "mntyzadxadtydpsat"; 
+		String pat = "data"; 
+	
+	System.out.print("Smallest window is :\n " + 
+						findSubString(str, pat)); 
+	} 
+} 
